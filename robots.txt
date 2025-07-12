@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://voidthis.com/sitemap.xml
+sitemap:https://voidthis.com/sitemap.xml
