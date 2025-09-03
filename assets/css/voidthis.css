@@ -123,6 +123,19 @@ body { margin: 0; font-family: "Source Sans Pro", sans-serif; font-size: 1rem; f
 } .navbar-toggler:hover, .navbar-toggler:focus { text-decoration: none;
 } .navbar-toggler-icon { display: inline-block; width: 1.5em; height: 1.5em; vertical-align: middle; content: ""; background: no-repeat center center; background-size: 100% 100%;
 } 
+
+/* =============================
+   MOBILE NAV FIX
+============================= */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    display: none;
+  }
+  .navbar-collapse.show {
+    display: block;
+  }
+}
+
 /* =========================================================
    Media Queries
    ========================================================= */ 
@@ -172,7 +185,7 @@ body { margin: 0; font-family: "Source Sans Pro", sans-serif; font-size: 1rem; f
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
-  color: #ff007f; /* morado oscuro */
+  color: #d58017; /* morado oscuro */
   font-family: 'Rubik Glitch', monospace;
 }
 
@@ -188,7 +201,7 @@ body { margin: 0; font-family: "Source Sans Pro", sans-serif; font-size: 1rem; f
 
 /* ====== LINK ACTIVO ====== */
 .navbar-nav .nav-link.active {
-  color: #ff007f;
+  color: #303030;
 }
 
 /* =========================================================
@@ -371,7 +384,7 @@ body { min-width: 992px !important; }
 .container { position: relative; height: 100%;
 } .header .header-content { width: 100%; position: absolute; left: 0; top: 55%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); color: #fff;
 } .header .header-content .header-subtitle { font-weight: 200; font-size: calc(20px + (45 - 20) * ((100vw - 300px) / (1600 - 300))) ;color: #858585;
-} .header .header-content .header-title { font-size: calc(40px + (120 - 40) * ((100vw - 300px) / (1600 - 300))); font-weight: bold; line-height: .7; margin-bottom: 25px; color: #ffffff;text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+} .header .header-content .header-title { font-size: calc(40px + (100 - 40) * ((100vw - 300px) / (1600 - 300))); font-weight: bold; line-height: .7; margin-bottom: 25px; color: #ffffff;text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 } .header .header-content .header-mono { letter-spacing: 5px; font-weight: 500; font-size: calc(12px + (19 - 12) * ((100vw - 300px) / (1600 - 300))); margin-bottom: 40px;
 } 
 /* =========================================================
