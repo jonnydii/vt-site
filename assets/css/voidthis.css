@@ -1,0 +1,814 @@
+@charset "UTF-8"; @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap");
+
+
+
+.logo {
+  font-size: 3rem;
+  font-family: monospace;
+  animation: zoomIn 2s ease-in-out;
+}
+
+@keyframes zoomIn {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+}
+
+
+
+
+
+
+/* =========================================================
+   Root Variables
+   ========================================================= */
+:root { --blue: #79f5ad; --indigo: #C45F90; --purple: #A16AE8; --pink: #FC8BC0; --red: #47040d; --orange: #FF8882; --yellow: #FAD02C; --green: #A3C14A; --teal: #20c997; --cyan: #47D8E0; --white: #a4005d; --gray: #6c757d; --gray-dark: #343a40; --primary: #ff00f7; --secondary: #6c757d; --success: #A3C14A; --info: #47D8E0; --warning: #FF8882; --danger: #F85C70; --light: #ff00cc; --dark: #343a40; --breakpoint-xs: 0; --breakpoint-sm: 576px; --breakpoint-md: 768px; --breakpoint-lg: 992px; --breakpoint-xl: 1200px; --font-family-sans-serif: "Source Sans Pro", sans-serif; --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+} 
+/* =========================================================
+   Reset and Base Styles
+   ========================================================= */
+*,
+*::before,
+*::after { box-sizing: border-box;
+} html { font-family: sans-serif; line-height: 1.15; -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+} footer, header, nav, section { display: block;
+} 
+/* =========================================================
+   Body Styles
+   ========================================================= */
+body { margin: 0; font-family: "Source Sans Pro", sans-serif; font-size: 1rem; font-weight: 400; line-height: 1.5; color: #212529; text-align: left; background-color: #ffffff;
+} hr { box-sizing: content-box; height: 0; overflow: visible;
+} h1, h2, h3, h4, h5, h6 { margin-top: 0; margin-bottom: 0.5rem;
+} p { margin-top: 0; margin-bottom: 1rem;
+} ul { margin-top: 0; margin-bottom: 1rem;
+} img { vertical-align: middle; border-style: none;
+} ::-webkit-file-upload-button { font: inherit; -webkit-appearance: button;
+} h1, h2, h3, h4, h5, h6 { margin-bottom: 0.5rem; font-family: "Dosis", sans-serif; font-weight: 500; line-height: 1.2;
+} h1 { font-size: 2.5rem;
+} h2 { font-size: 2rem;
+} h3 { font-size: 1.75rem;
+} h4 { font-size: 1.5rem;
+} h5 { font-size: 1.25rem;
+} h6 { font-size: 1rem;
+} 
+/* =========================================================
+   Container Styles
+   ========================================================= */
+.container { width: 100%; padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto;
+} 
+/* =========================================================
+   Media Queries
+   ========================================================= */
+@media (min-width: 576px) { 
+/* =========================================================
+   Container Styles
+   ========================================================= */
+.container { max-width: 540px; }
+} 
+/* =========================================================
+   Media Queries
+   ========================================================= */
+@media (min-width: 768px) { 
+/* =========================================================
+   Container Styles
+   ========================================================= */
+.container { max-width: 720px; }
+} 
+/* =========================================================
+   Media Queries
+   ========================================================= */
+@media (min-width: 992px) { 
+/* =========================================================
+   Container Styles
+   ========================================================= */
+.container { max-width: 960px; }
+} 
+/* =========================================================
+   Media Queries
+   ========================================================= */
+@media (min-width: 1200px) { 
+/* =========================================================
+   Container Styles
+   ========================================================= */
+.container { max-width: 1140px; }
+} .container-fluid { width: 100%; padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto;
+} .row { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; margin-right: -15px; margin-left: -15px;
+} 
+/* =========================================================
+   Navbar Styles
+   ========================================================= */
+.navbar { position: relative; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; padding: 0.8rem 1rem;
+} .navbar > .container { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between;
+} .navbar-nav { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; padding-left: 0; margin-bottom: 0; list-style: none;
+} .navbar-nav .nav-link { padding-right: 0; padding-left: 0;
+} .navbar-collapse { -webkit-flex-basis: 100%; -ms-flex-preferred-size: 100%; -webkit-box-flex: 1; -webkit-flex-grow: 1; -ms-flex-positive: 1; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center;
+} .navbar-toggler { padding: 0.25rem 0.75rem; font-size: 1.25rem; line-height: 1; background-color: transparent; border: 1px solid transparent; border-radius: 0.25rem;
+} .navbar-toggler:hover, .navbar-toggler:focus { text-decoration: none;
+} .navbar-toggler-icon { display: inline-block; width: 1.5em; height: 1.5em; vertical-align: middle; content: ""; background: no-repeat center center; background-size: 100% 100%;
+} 
+
+/* =============================
+   MOBILE NAV FIX
+============================= */
+@media (max-width: 991.98px) {
+  .navbar-collapse { 
+    display: none;
+  }
+  .navbar-collapse.show {
+    display: block;
+  }
+}
+
+/* =========================================================
+   Media Queries
+   ========================================================= */ 
+/* =========================================================
+   Media Queries
+   ========================================================= */ 
+/* =========================================================
+   Media Queries
+   ========================================================= */ 
+/* =========================================================
+   Media Queries
+   ========================================================= */ 
+/* =========================================================
+   Media Queries
+   ========================================================= */
+@media (max-width: 991.98px) { .navbar-expand-lg > .container { padding-right: 0; padding-left: 0; }
+} 
+/* =========================================================
+   Media Queries
+   ========================================================= */
+@media (min-width: 992px) { .navbar-expand-lg { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -webkit-flex-flow: row nowrap; -ms-flex-flow: row nowrap; flex-flow: row nowrap; -webkit-box-pack: start; -webkit-justify-content: flex-start; -ms-flex-pack: start; justify-content: flex-start; } .navbar-expand-lg .navbar-nav { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; } .navbar-expand-lg .navbar-nav .nav-link { padding-right: 1.5rem; padding-left: 1.5rem; } .navbar-expand-lg > .container { -webkit-flex-wrap: nowrap; -ms-flex-wrap: nowrap; flex-wrap: nowrap; } .navbar-expand-lg .navbar-collapse { display: -webkit-box !important; display: -webkit-flex !important; display: -ms-flexbox !important; display: flex !important; -webkit-flex-basis: auto; -ms-flex-preferred-size: auto; flex-basis: auto; } .navbar-expand-lg .navbar-toggler { display: none; }
+} 
+/* =========================================================
+   Media Queries
+   ========================================================= */ 
+/* =========================================================
+   Media Queries
+   ========================================================= */ 
+/* ====== NAVBAR LIGHT ====== */
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(17, 255, 0, 0.8); /* verde neón */
+}
+
+.navbar-light .navbar-toggler {
+  color: rgba(0, 255, 21, 0.8);
+  border-color: rgba(21, 255, 0, 0.1);
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+/* ====== NAVBAR DARK ====== */
+.navbar-dark .navbar-nav .nav-link {
+  color: rgb(0, 0, 0); /* negro */
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #d58017; /* morado oscuro */
+  font-family: 'Rubik Glitch', monospace;
+}
+
+.navbar-dark .navbar-toggler {
+  color: rgba(138, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+/* ====== LINK ACTIVO ====== */
+.navbar-nav .nav-link.active {
+  color: #303030;
+}
+
+/* =========================================================
+   Media Queries
+   ========================================================= */ 
+/* =========================================================
+   Modal Styles
+   ========================================================= */ 
+
+/* =========================================================
+   Media Queries
+   ========================================================= */
+@media (min-width: 576px) { 
+/* =========================================================
+   Modal Styles
+   ========================================================= */ 
+ 
+/* =========================================================
+   Modal Styles
+   ========================================================= */
+} 
+/* =========================================================
+   Media Queries
+   ========================================================= */
+@media (min-width: 992px) { 
+/* =========================================================
+   Modal Styles
+   ========================================================= */
+} 
+/* =========================================================
+   Media Queries
+   ========================================================= */
+@media (min-width: 1200px) { 
+/* =========================================================
+   Modal Styles
+   ========================================================= */
+} .bg-dark { background-color: #343a40 !important;
+} .border-right { border-right: 1px solid #dee2e6 !important;
+} @supports ((position: -webkit-sticky) or (position: sticky)) { .sticky-top { position: -webkit-sticky; position: sticky; top: 0; z-index: 1020; }
+} .mb-0 { margin-bottom: 0 !important;
+} .mb-1 { margin-bottom: 0.25rem !important;
+} .mr-3 { margin-right: 1rem !important;
+} .mb-3 { margin-bottom: 1rem !important;
+} .mb-5 { margin-bottom: 3rem !important;
+} .pt-1 { padding-top: 0.25rem !important;
+} .pt-3,
+.py-3 { padding-top: 1rem !important;
+} .py-3 { padding-bottom: 1rem !important;
+} .m-auto { margin: auto !important;
+} .mr-auto { margin-right: auto !important;
+} .ml-auto { margin-left: auto !important;
+} 
+/* =========================================================
+   Text and Utility Classes
+   ========================================================= */ 
+ 
+/* =========================================================
+   Text and Utility Classes
+   ========================================================= */ 
+
+   .font-weight-light { font-weight: 300 !important;
+} .font-weight-bold { font-weight: 700 !important;
+} 
+/* =========================================================
+   Text and Utility Classes
+   ========================================================= */ 
+
+/* =========================================================
+   Text and Utility Classes
+   ========================================================= */
+.text-danger { color: #ffffff !important;
+} a
+/* =========================================================
+   Text and Utility Classes
+   ========================================================= */
+.text-danger:hover, a
+/* =========================================================
+   Text and Utility Classes
+   ========================================================= */
+.text-danger:focus { color: #f51330 !important;
+} 
+/* =========================================================
+   Text and Utility Classes
+   ========================================================= */
+.text-light { color: #f8f9fa !important;
+} 
+/* =========================================================
+   Text and Utility Classes
+   ========================================================= */ 
+ 
+/* =========================================================
+   Media Queries
+   ========================================================= */
+@media print { 
+/* =========================================================
+   Reset and Base Styles
+   ========================================================= */
+*, *::before, *::after { text-shadow: none !important; box-shadow: none !important; } a:not(.btn) { text-decoration: underline; } img { page-break-inside: avoid; } p, h2, h3 { orphans: 3; widows: 3; } h2, h3 { page-break-after: avoid; } @page { size: a3; } 
+/* =========================================================
+   Body Styles
+   ========================================================= */
+body { min-width: 992px !important; } 
+/* =========================================================
+   Container Styles
+   ========================================================= */
+.container { min-width: 992px !important; } 
+/* =========================================================
+   Navbar Styles
+   ========================================================= */
+.navbar { display: none; }
+} 
+/* =========================================================
+   Media Queries
+   ========================================================= */ 
+/* =========================================================
+   Social Icons
+   ========================================================= */
+.social-icons { list-style-type: none; padding-left: 0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; max-width: 180px;
+} 
+/* =========================================================
+   Social Icons
+   ========================================================= */
+.social-icons .social-link { font-size: 18px;
+} 
+/* =========================================================
+   Social Icons
+   ========================================================= */
+.social-icons .social-link:hover { color: #F85C70;
+} 
+/* =========================================================
+   Navbar Styles
+   ========================================================= */
+.navbar { background-color: #fdb020 !important;
+} 
+
+/* =========================================================
+   Navbar Styles
+   ========================================================= */
+.navbar { box-shadow: 0 1px 10px rgba(54, 54, 54, 0.18); -webkit-box-shadow: 0 1px 10px rgba(54, 54, 54, 0.18);
+} .navbar .navbar-nav:first-child .nav-item:first-child .nav-link { padding-left: 0;
+} .navbar .navbar-nav:last-child .nav-item:last-child .nav-link { padding-right: 0;
+} .navbar .nav-link { font-weight: bold; font-family: "special elite","Open Sans",sans-serif;
+} .navbar .brand { text-align: center;
+} .navbar .brand .brand-img { position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); -weblit-transform: translate(-50%, -50%); -webkit-transition: .5s !important; transition: .5s !important; -weblit-transition: .5s !important; z-index: 2; width: 170px; border-radius: 50%;
+} .navbar .brand .brand-txt { position: relative; bottom: -20px; opacity: 0; -webkit-transition: 1s; transition: 1s; -weblit-transition: 1s; z-index: 1;
+} 
+.navbar .brand .brand-txt .brand-subtitle {
+  font-size: 13px;
+  color: #000000;
+}  
+  /*hide circle*/
+.navbar.affix .brand-img {
+  top: -10px;
+  opacity: 0;
+}
+/*color texto circulo*/
+.navbar.affix .brand-txt {
+  bottom: 0;
+  opacity: 1;
+}
+
+/* =========================================================
+   Media Queries
+   ========================================================= */
+@media (max-width: 991.98px) { .navbar .brand { display: none; }
+} 
+/* =========================================================
+   Footer Section
+   ========================================================= */
+.footer { background: #252525;
+} 
+/* =========================================================
+   Header Section
+   ========================================================= */
+.header { position: relative; height: 80vh; min-height: 600px; background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.767), rgba(0, 0, 0, 0.7)), url(../imgs/Sex-Pistols.jpg); background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../imgs/Sex-Pistols.jpg); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed; color: #fff;
+} .header 
+/* =========================================================
+   Container Styles
+   ========================================================= */
+.container { position: relative; height: 100%;
+} .header .header-content { width: 100%; position: absolute; left: 0; top: 55%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); color: #fff;
+} .header .header-content .header-subtitle { font-weight: 200; font-size: calc(20px + (45 - 20) * ((100vw - 300px) / (1600 - 300))) ;color: #858585;
+} .header .header-content .header-title { font-size: calc(40px + (100 - 40) * ((100vw - 300px) / (1600 - 300))); font-weight: bold; line-height: .7; margin-bottom: 25px; color: #ffffff;text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+} .header .header-content .header-mono { letter-spacing: 5px; font-weight: 500; font-size: calc(12px + (19 - 12) * ((100vw - 300px) / (1600 - 300))); margin-bottom: 40px;
+} 
+/* =========================================================
+   Media Queries
+   ========================================================= */
+@media (max-width: 767.98px) { 
+/* =========================================================
+   Header Section
+   ========================================================= */
+.header { height: 500px; min-height: 500px; } .header 
+/* =========================================================
+   Social Icons
+   ========================================================= */
+.social-icons { margin: auto; } .header .header-content { padding: 20px; } .header .header-content .header-mono { letter-spacing: 2px; }
+} .header-title { font-size: 2.4rem; font-weight: bold; opacity: .8; color: #a10000;
+} .section { padding: 80px 0;
+} .about-section { border-bottom: 1px solid #dee2e6;
+} .about-section .about-card { padding: 60px; border-right: 1px solid #dee2e6;
+} .about-section .about-card:last-child { border-right: none;
+}
+
+/* Manifesto Section */
+.manifesto {
+  position: relative;
+  min-height: 100vh; /* permite crecer si el texto es largo */
+  background: url('https://i.imgur.com/XNkK0CT.jpg') no-repeat center center;
+  background-size: cover;
+  color: #f5f5f5;
+  font-family: 'Special Elite', monospace;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.manifesto .overlay {
+  background-color: #1b1b1b;
+  width: 100%;
+  padding: 80px 30px 60px 30px; /* espacio arriba y abajo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+  background-repeat: repeat;
+}
+
+.text-box {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.manifesto-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  animation: fadeIn 1.5s ease-in-out;
+  margin: 0 auto;
+}
+
+.manifesto-text strong {
+  color: #fdb020;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fondo-textura {
+  position: relative;
+  background-color: #111;
+  color: white;
+  padding: 50px;
+  margin: 50px auto;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.seccion-textura {
+  position: relative;
+  background-color: #111;
+  color: white;
+  padding: 80px 30px;
+  text-align: center;
+  border-radius: 16px;
+  margin: 60px auto;
+  max-width: 1000px;
+  overflow: hidden;
+}
+
+.seccion-textura::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-position: 0 0, 25px 25px;
+  background-size: 50px 50px;
+  animation: ruidoAnim 0.25s infinite;
+  z-index: 0;
+}
+
+.seccion-textura * {
+  position: relative;
+  z-index: 1;
+}
+/*manifesto end*/
+
+
+
+
+/* Section 1 decks */
+.decks .overlay {
+  width: 100%;
+  padding: 80px 30px 60px 30px;
+  background-color: #000000;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+  background-repeat: repeat;
+}
+
+.container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.deck-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Espacio entre patinetas */
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1000px; /* Centra y limita ancho máximo */
+}
+
+.deck-img {
+  width: 45%;        /* quepan 3 en fila con espacio */
+  max-width: 300px;  /* evita que sean enormes en pantallas grandes */
+  height: auto;
+  display: block;
+}
+
+/* Animación de entrada (si la usas en otro lugar) */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fondo con textura para otras secciones */
+.fondo-textura {
+  position: relative;
+  background-color: #4c4848;
+  color: white;
+  padding: 50px;
+  margin: 50px auto;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.seccion-textura {
+  position: relative;
+  background-color: #111;
+  color: rgb(0, 0, 0);
+  padding: 80px 30px;
+  text-align: center;
+  border-radius: 16px;
+  margin: 60px auto;
+  max-width: 1000px;
+  overflow: hidden;
+}
+
+.seccion-textura::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image:
+    radial-gradient(circle, rgb(1, 1, 1) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-position: 0 0, 25px 25px;
+  background-size: 50px 50px;
+  animation: ruidoAnim 0.25s infinite;
+  z-index: 0;
+}
+
+.seccion-textura * {
+  position: relative;
+  z-index: 1;
+}
+
+/*end section*/
+
+
+
+
+
+/* Section merchandise */
+
+
+.merch .overlay {
+  width: 100%;
+  padding: 80px 30px 60px 30px; /* espacio arriba y abajo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+  background-repeat: repeat;
+}
+
+.merch h2{
+  text-align: center;
+  font-family: 'special elite', monospace;
+  font-size: 3.5em;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fondo-textura {
+  position: relative;
+  background-color: #4c4848;
+  color: white;
+  padding: 50px;
+  margin: 50px auto;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.seccion-textura {
+  position: relative;
+  background-color: #111;
+  color: rgb(0, 0, 0);
+  padding: 80px 30px;
+  text-align: center;
+  border-radius: 16px;
+  margin: 60px auto;
+  max-width: 1000px;
+  overflow: hidden;
+}
+
+.seccion-textura::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image:
+    radial-gradient(circle, rgb(1, 1, 1) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-position: 0 0, 25px 25px;
+  background-size: 50px 50px;
+  animation: ruidoAnim 0.25s infinite;
+  z-index: 0;
+}
+
+.seccion-textura * {
+  position: relative;
+  z-index: 1;
+}
+/*end section*/
+
+
+
+/*imagen*/
+img {
+  width: 350px; /* o el tamaño que quieras */
+  height: auto; /* para que mantenga proporción */
+}
+
+
+
+/*contact starts*/
+
+/* Fondo oscuro completo para toda la sección */
+.contact {
+  background-color: #111;
+  color: #fff;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Título */
+.contact h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Estilos del formulario */
+.contact form {
+  max-width: 400px;
+  margin: 0 auto 30px;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #222;
+  color: #fff;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+  color: #bbb;
+}
+
+/* Botón */
+.contact button {
+  width: 100%;
+  padding: 12px;
+  background-color: #bf0089;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+  background-color: #a61f1f;
+}
+
+/* Info adicional */
+.contact1 {
+  width: 100%;
+  /* o */
+  max-width: none;
+  margin: 0;
+  color: #ccc;
+  font-size: 14px;
+}
+
+
+
+.contact1 {
+  margin: 8px 0;
+}
+
+/*contact ends*/
+
+
+
+/*team starts*/
+.team-section {
+  padding: 100px 40px;
+  background-color: #111;
+  color: #f0f0f0;
+  text-align: center;
+  font-family: 'Special Elite', monospace;
+}
+
+.team-section h2 {
+  font-size: 3.5em;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'rubik glitch', monospace;
+
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.team-member {
+  background-color: #1c1c1c;
+  padding: 20px;
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+}
+
+.team-member img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.team-member h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2em;
+  color: #fff;
+}
+
+.team-member .role {
+  font-size: 0.9em;
+  color: #aaa;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.team-member p {
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+/*team ends*/
